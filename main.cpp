@@ -1,17 +1,40 @@
 #include <iostream>
-#include <format>
 
 using namespace std;
 
-const string prefix[] = {"Micro", "Milli", "centi", "Kilo", "Mega"};
+const string prefix[] = {"Micro", "Milli", "centi", "basic", "Kilo", "Mega"};
 const string units[] = {"Gram", "Second", "Meter", "Kelvin", "Ampere", "Candela", "Mole"};
-const double multiplier[] = {1e-6, 1e-3, 1e-2, 1e3, 1e6};
+const double multiplier1[] = {1e-6, 1e-3, 1e-4, 1e6, 1e-9, 1e-12};
+const double multiplier2[] = {1e-6, 1e3, 1e4, 1e6, 1e9, 1e12};
 int option, unit_option, convert_option;
 
-double value, result;
+double value, result = 0.0;
 
-double calculate(double value, string convert_from, string convert_to)
+double calculate(double valuee, string convert_from, string convert_to)
 {
+    double value_convert_from__prefix, value_convert_to__prefix;
+    for (int i = 0; i < 6; i++)
+    {
+        if (convert_from == prefix[i])
+        {
+            for (int j = 0; j < 6; j++)
+            {
+                if (convert_to == prefix[j])
+                {
+                    if (j > i)
+                    {
+
+                        result = valuee * multiplier1[j];
+                    }
+                    else if (j < i)
+                    {
+                        result = valuee * multiplier2[i];
+                    }
+                }
+            }
+        }
+    }
+    return result;
 }
 
 int main()
@@ -36,14 +59,15 @@ int main()
             cin >> unit_option;
         } while (unit_option > 5 || unit_option < 1);
         cout << "Convert to which Unit: \n";
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < 6; i++)
         {
-            cout << prefix[i] << "\n";
+            cout << i+1 << "." << prefix[i] << units[0] << "\n";
         }
         cin >> convert_option;
 
         cout << "please Enter Value: ";
         cin >> value;
+        cout << "Your result is: " << calculate(value, prefix[unit_option-1], prefix[convert_option-1]);
     }
 
     break;
@@ -118,8 +142,9 @@ int main()
         {
             cout << "from what value do you want to convert: ";
             cout << "\n1." << prefix[0] << "-" << units[6] << "\n2." << prefix[1]
-                 << "-" << units[6] << "\n3." << prefix[2] << "-" << units[6] << "\n4." cin >>
-                unit_option;
+                 << "-" << units[6] << "\n3." << prefix[2] << "-" << units[6] << "\n4."
+                 << units[6] << "\n5." << prefix[4] << "-" << units[6] << endl;
+            cin >> unit_option;
         } while (unit_option > 5 || unit_option < 1);
     }
 
