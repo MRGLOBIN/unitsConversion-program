@@ -55,19 +55,18 @@ int main()
             cout << "from what value do you want to convert: ";
             cout << "\n1." << prefix[0] << "-" << units[0] << "\n2." << prefix[1]
                  << "-" << units[0] << "\n3." << prefix[2] << "-" << units[0] << "\n4."
-                 << units[0] << "\n5." << prefix[4] << "-" << units[0] << endl;
+                 << units[0] << "\n5." << prefix[4] << "-" << units[0] << "\n6." << prefix[5] << "-" << units[0] << endl;
             cin >> unit_option;
         } while (unit_option > 5 || unit_option < 1);
         cout << "Convert to which Unit: \n";
         for (int i = 0; i < 6; i++)
         {
-            cout << i+1 << "." << prefix[i] << units[0] << "\n";
+            cout << i + 1 << "." << prefix[i] << units[0] << "\n";
         }
         cin >> convert_option;
-
         cout << "please Enter Value: ";
         cin >> value;
-        cout << "Your result is: " << calculate(value, prefix[unit_option-1], prefix[convert_option-1]);
+        cout << "Your result is: " << calculate(value, prefix[unit_option - 1], prefix[convert_option - 1]);
     }
 
     break;
@@ -78,9 +77,18 @@ int main()
             cout << "from what value do you want to convert: ";
             cout << "\n1." << prefix[0] << "-" << units[1] << "\n2." << prefix[1]
                  << "-" << units[1] << "\n3." << prefix[2] << "-" << units[1] << "\n4."
-                 << units[1] << "\n5." << prefix[4] << "-" << units[1] << endl;
+                 << units[1] << "\n5." << prefix[4] << "-" << units[1] << "\n6." << prefix[5] << "-" << units[1] << endl;
             cin >> unit_option;
         } while (unit_option > 5 || unit_option < 1);
+        cout << "Convert to which Unit: \n";
+        for (int i = 0; i < 6; i++)
+        {
+            cout << i + 1 << "." << prefix[i] << units[1] << "\n";
+        }
+        cin >> convert_option;
+        cout << "please Enter Value: ";
+        cin >> value;
+        cout << "Your result is: " << calculate(value, prefix[unit_option - 1], prefix[convert_option - 1]);
     }
 
     break;
@@ -91,9 +99,19 @@ int main()
             cout << "from what value do you want to convert: ";
             cout << "\n1." << prefix[0] << "-" << units[2] << "\n2." << prefix[1]
                  << "-" << units[2] << "\n3." << prefix[2] << "-" << units[2] << "\n4."
-                 << units[2] << "\n5." << prefix[4] << "-" << units[2] << endl;
+                 << units[2] << "\n5." << prefix[4] << "-" << units[2] << "\n6." << prefix[5] << "-" << units[2] << endl;
             cin >> unit_option;
         } while (unit_option > 5 || unit_option < 1);
+        cout << "Convert to which Unit: \n";
+        for (int i = 0; i < 6; i++)
+        {
+            cout << i + 1 << "." << prefix[i] << units[2] << "\n";
+        }
+        cin >> convert_option;
+
+        cout << "please Enter Value: ";
+        cin >> value;
+        cout << "Your result is: " << calculate(value, prefix[unit_option - 1], prefix[convert_option - 1]);
     }
 
     break;
@@ -104,9 +122,19 @@ int main()
             cout << "from what value do you want to convert: ";
             cout << "\n1." << prefix[0] << "-" << units[3] << "\n2." << prefix[1]
                  << "-" << units[3] << "\n3." << prefix[2] << "-" << units[3] << "\n4."
-                 << units[3] << "\n5." << prefix[4] << "-" << units[3] << endl;
+                 << units[3] << "\n5." << prefix[4] << "-" << units[3] << "\n6." << prefix[5] << "-" << units[3] << endl;
             cin >> unit_option;
         } while (unit_option > 5 || unit_option < 1);
+        cout << "Convert to which Unit: \n";
+        for (int i = 0; i < 6; i++)
+        {
+            cout << i + 1 << "." << prefix[i] << units[3] << "\n";
+        }
+        cin >> convert_option;
+
+        cout << "please Enter Value: ";
+        cin >> value;
+        cout << "Your result is: " << calculate(value, prefix[unit_option - 1], prefix[convert_option - 1]);
     }
 
     break;
@@ -117,9 +145,19 @@ int main()
             cout << "from what value do you want to convert: ";
             cout << "\n1." << prefix[0] << "-" << units[4] << "\n2." << prefix[1]
                  << "-" << units[4] << "\n3." << prefix[2] << "-" << units[4] << "\n4."
-                 << units[4] << "\n5." << prefix[4] << "-" << units[4] << endl;
+                 << units[4] << "\n5." << prefix[4] << "-" << units[4] << "\n6." << prefix[5] << "-" << units[4] << endl;
             cin >> unit_option;
         } while (unit_option > 5 || unit_option < 1);
+        cout << "Convert to which Unit: \n";
+        for (int i = 0; i < 6; i++)
+        {
+            cout << i + 1 << "." << prefix[i] << units[4] << "\n";
+        }
+        cin >> convert_option;
+
+        cout << "please Enter Value: ";
+        cin >> value;
+        cout << "Your result is: " << calculate(value, prefix[unit_option - 1], prefix[convert_option - 1]);
     }
 
     break;
@@ -130,9 +168,19 @@ int main()
             cout << "from what value do you want to convert: ";
             cout << "\n1." << prefix[0] << "-" << units[5] << "\n2." << prefix[1]
                  << "-" << units[5] << "\n3." << prefix[2] << "-" << units[5] << "\n4."
-                 << units[5] << "\n5." << prefix[4] << "-" << units[5] << endl;
+                 << units[5] << "\n5." << prefix[4] << "-" << units[5] << "\n6." << prefix[5] << "-" << units[5] << endl;
             cin >> unit_option;
         } while (unit_option > 5 || unit_option < 1);
+        cout << "Convert to which Unit: \n";
+        for (int i = 0; i < 6; i++)
+        {
+            cout << i + 1 << "." << prefix[i] << units[5] << "\n";
+        }
+        cin >> convert_option;
+
+        cout << "please Enter Value: ";
+        cin >> value;
+        cout << "Your result is: " << calculate(value, prefix[unit_option - 1], prefix[convert_option - 1]);
     }
 
     break;
@@ -143,9 +191,19 @@ int main()
             cout << "from what value do you want to convert: ";
             cout << "\n1." << prefix[0] << "-" << units[6] << "\n2." << prefix[1]
                  << "-" << units[6] << "\n3." << prefix[2] << "-" << units[6] << "\n4."
-                 << units[6] << "\n5." << prefix[4] << "-" << units[6] << endl;
+                 << units[6] << "\n5." << prefix[4] << "-" << units[6] << "\n6." << prefix[5] << "-" << units[6] << endl;
             cin >> unit_option;
         } while (unit_option > 5 || unit_option < 1);
+        cout << "Convert to which Unit: \n";
+        for (int i = 0; i < 6; i++)
+        {
+            cout << i + 1 << "." << prefix[i] << units[6] << "\n";
+        }
+        cin >> convert_option;
+
+        cout << "please Enter Value: ";
+        cin >> value;
+        cout << "Your result is: " << calculate(value, prefix[unit_option - 1], prefix[convert_option - 1]);
     }
 
     default:
